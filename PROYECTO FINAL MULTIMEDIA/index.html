@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final de Multimedia</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        h1, h2, p {
+            color: #fff;
+        }
+
+        .menu-desplegable {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding: 15px;
+            width: 200px;
+            z-index: 1;
+        }
+
+        .menu-icono {
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        #botonMostrar {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop>
+        <source src="img/Fondo tecnológico en 4K.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <h1>Proyecto Final de Multimedia</h1>
+
+    <div id="botonMostrar" class="menu-icono">&#9776; Menú</div>
+    <div class="menu-desplegable" id="opcionesDesplegable">
+        <ul>
+            <li><a href="https://app.animaker.com/animo/5zEYnUry0c4RkOjb/">Animación</a></li>
+            <li><a href="https://new.express.adobe.com/webpage/i3vgmeaSkR4P7">Álbum GIMP</a></li>
+            <li><a href="https://new.express.adobe.com/webpage/FiLX897TndyPc">Álbum Inkscape</a></li>
+            <li><a href="https://new.express.adobe.com/published/urn:aaid:sc:VA6C2:abba994e-5a38-40ca-8a9b-925b02ce7a90?promoid=Y69SGM5H&mv=other">Folleto Visual Studio</a></li>
+            <li><a href="https://new.express.adobe.com/published/urn:aaid:sc:VA6C2:fa0c949f-3278-426b-a0c8-3f8a82e66ca3?promoid=Y69SGM5H&mv=other">Folleto Inkscape</a></li>
+            <li><a href="https://github.com/Briancho23/Pagina-Junior">Pagina</a></li>
+            <li><a href="https://youtu.be/VwysiZ51-K0?si=4IAuC4IxNkOP6PkE">Sustentacion</a></li>
+        </ul>
+        </ul>
+    </div>
+
+    <div id="contenido">
+        <h2>Bienvenido a mi proyecto multimedia</h2>
+        <p>¡Hola! Mi nombre es Bryan Ferrer. Este es mi proyecto final de multimedia. Explora las opciones del menú para acceder directamente a la Animación, Álbum o Folleto.</p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Cw8uCWkQ_FE?si=rVCtvSvn3SMm_MCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <footer>
+        
+
+        <p>¿Quieres conocer mas acerca de este proyecto?. Revisa las opciones del menu</p>
+    </footer>
+
+    <script>
+        document.getElementById('botonMostrar').onclick = function() {
+            var menu = document.getElementById('opcionesDesplegable');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
